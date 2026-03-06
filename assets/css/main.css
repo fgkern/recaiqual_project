@@ -44,9 +44,13 @@ body {
 }
 
 .logo img {
-  height: 72px;
+  height: 56px;
   width: auto;
   display: block;
+  /* white background for ESRC logo readability */
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
 }
 
 .site-title-block {
