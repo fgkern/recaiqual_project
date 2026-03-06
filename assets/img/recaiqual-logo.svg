@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 95" width="380" height="95" role="img" aria-label="RecAIqual logo">
+  <defs>
+    <!-- Arrowhead: tip at refX -->
+    <marker id="ah" markerWidth="11" markerHeight="9" refX="9" refY="4.5"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0,0 9,4.5 0,9" fill="#3a8fc2"/>
+    </marker>
+    <!-- Drop shadow for text -->
+    <filter id="subtle-shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#0d1b2a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- ─── Recycling triangle symbol ─────────────────────────────────────── -->
+  <!--
+    Equilateral triangle, circumradius 34, center (45, 47)
+    Top    T  = (45, 13)
+    Bottom-right BR = (74.4, 64)
+    Bottom-left  BL = (15.6, 64)
+    Arrows go clockwise: T → BR → BL → T
+    Each arrow spans the middle 60% of its edge (20%–80%)
+  -->
+
+  <!-- Arrow 1: T → BR  (top-right edge, going down-right) -->
+  <line x1="51.9" y1="22.6"  x2="70.0" y2="55.8"
+        stroke="#3a8fc2" stroke-width="6" stroke-linecap="round"
+        marker-end="url(#ah)"/>
+
+  <!-- Arrow 2: BR → BL  (bottom edge, going left) -->
+  <line x1="68.5" y1="64"  x2="25.5" y2="64"
+        stroke="#3a8fc2" stroke-width="6" stroke-linecap="round"
+        marker-end="url(#ah)"/>
+
+  <!-- Arrow 3: BL → T  (left edge, going up-right) -->
+  <line x1="20.0" y1="55.8"  x2="39.0" y2="22.6"
+        stroke="#3a8fc2" stroke-width="6" stroke-linecap="round"
+        marker-end="url(#ah)"/>
+
+  <!-- Small dot at triangle centroid to suggest circular flow -->
+  <circle cx="45" cy="47" r="3.5" fill="#0d1b2a" opacity="0.25"/>
+
+  <!-- ─── Vertical divider ───────────────────────────────────────────────── -->
+  <line x1="100" y1="10" x2="100" y2="85" stroke="#dce4ef" stroke-width="1.5"/>
+
+  <!-- ─── Wordmark ──────────────────────────────────────────────────────── -->
+  <!--
+    Raleway 800, 54px.  "Rec" + "AI" (accent) + "qual"
+    Baseline at y=67 gives cap-tops ~y=27, descenders ~y=78 — fits 95px canvas.
+  -->
+  <text y="67"
+        font-family="'Raleway','Trebuchet MS',Arial,sans-serif"
+        font-weight="800"
+        font-size="54"
+        filter="url(#subtle-shadow)">
+    <tspan x="116" fill="#0d1b2a">Rec</tspan><tspan fill="#3a8fc2">AI</tspan><tspan fill="#0d1b2a">qual</tspan>
+  </text>
+
+</svg>
